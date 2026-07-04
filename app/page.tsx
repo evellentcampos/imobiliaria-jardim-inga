@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import AboutSection from "@/components/AboutSection";
 import EmailContact from "@/components/EmailContact";
 import Footer from "@/components/Footer";
+import FloatingWhatsapp from "@/components/FloatingWhatsapp";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
       </main>
 
       <Footer />
+
+      <FloatingWhatsapp />
     </>
   );
 }
