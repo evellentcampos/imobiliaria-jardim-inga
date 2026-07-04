@@ -26,14 +26,17 @@ export default function FloatingWhatsapp() {
       target="_blank"
       rel="noopener noreferrer"
       className={`
-        fixed bottom-6 right-6 z-[9999]
-        flex items-center gap-3
+        fixed z-[9999]
+        bottom-5 right-4
+        flex items-center gap-2
         rounded-full bg-[#25D366]
-        px-7 py-4
-        text-lg font-bold text-white
-        shadow-2xl
+        px-5 py-3
+        text-sm font-bold text-white
+        shadow-[0_10px_30px_rgba(0,0,0,0.28)]
         transition-all duration-500 ease-out
-        hover:scale-105 hover:shadow-[0_20px_40px_rgba(0,0,0,0.35)]
+        hover:scale-105
+        sm:right-6 sm:px-6 sm:py-4 sm:text-base
+        md:text-lg
         ${
           showButton
             ? "translate-y-0 opacity-100"
@@ -41,8 +44,8 @@ export default function FloatingWhatsapp() {
         }
       `}
     >
-      <FaWhatsapp className="text-4xl" />
-      <span>Agende sua visita</span>
+      <FaWhatsapp className="text-2xl sm:text-3xl" />
+      <span>Agendar visita</span>
     </a>
   );
 }
