@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -39,6 +40,20 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-screen bg-[#FAF8F2] text-[#1F1F1F]">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WGLZXVT2JN"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WGLZXVT2JN');
+          `}
+        </Script>
+
         {children}
       </body>
     </html>
