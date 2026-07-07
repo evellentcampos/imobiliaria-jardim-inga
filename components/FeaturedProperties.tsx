@@ -32,12 +32,12 @@ export default function FeaturedProperties() {
     },
     {
       tag: "Destaque",
-      title: "Casa com 2 Quartos",
-      location: "Parque Estrela Dalva IX",
-      price: "R$ 150.000",
-      image: "https://i.ibb.co/v4gt6p7B/Screenshot-20260703-122205-Samsung-Internet.jpg",
-      link: "https://www.zapimoveis.com.br/imovel/venda-casa-2-quartos-parque-estrela-dalva-ix-luziania-go-65m2-id-2891467291/?source=ranking%2Crp",
-      quartos: 2,
+      title: "Apartamento com 3 Quartos",
+      location: "Parque Estrela Dalva IX e X",
+      price: "R$ 180.000",
+      image: "https://i.ibb.co/LzNGm4T3/20260706-163734-582.jpg",
+      link: "https://www.zapimoveis.com.br/imovel/venda-apartamento-3-quartos-parque-estrela-dalva-ix-e-x-luziania-go-80m2-id-2897486909/?preview=true",
+      quartos: 3,
       banheiros: 1,
       vagas: 1,
     },
@@ -72,6 +72,7 @@ export default function FeaturedProperties() {
           <h2 className="text-4xl font-extrabold text-[#183D24]">
             Encontre sua casa
           </h2>
+
           <p className="mt-2 text-lg text-[#555]">
             Imóveis em destaque selecionados para você.
           </p>
@@ -116,11 +117,7 @@ export default function FeaturedProperties() {
                   </span>
 
                   <span className="flex items-center gap-2">
-                    <img
-                      src={icons.shower}
-                      alt="Banheiros"
-                      className="h-5 w-5"
-                    />
+                    <img src={icons.shower} alt="Banheiros" className="h-5 w-5" />
                     {property.banheiros}
                   </span>
 
