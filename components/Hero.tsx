@@ -60,12 +60,10 @@ export default function Hero() {
           </div>
 
           <a
-            href="https://www.zapimoveis.com.br/imobiliaria/849619/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/simulacao"
             className="mt-9 inline-flex w-full justify-center rounded-xl bg-[#214D2F] px-7 py-4 text-center text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#183923] hover:shadow-xl active:scale-95 sm:w-auto md:mt-10 md:px-8"
           >
-            Ver imóveis disponíveis
+            Veja se pode comprar
           </a>
         </div>
 
