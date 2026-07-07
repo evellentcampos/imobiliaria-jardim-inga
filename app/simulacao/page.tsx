@@ -120,13 +120,13 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
   const currentQuestion = questions[step];
 
   return (
-    <main className="min-h-screen bg-[#FAF8F2] px-5 py-10">
-      <section className="mx-auto flex min-h-[620px] max-w-3xl items-center justify-center rounded-[32px] bg-white p-6 shadow-xl md:p-12">
+    <main className="min-h-screen bg-[#FAF8F2] px-4 py-6 sm:px-5 sm:py-10">
+      <section className="mx-auto flex min-h-[560px] max-w-3xl items-center justify-center rounded-[24px] bg-white p-5 shadow-xl sm:min-h-[620px] sm:rounded-[32px] sm:p-6 md:p-12">
         {loading ? (
           <div className="text-center">
             <div className="mx-auto h-16 w-16 animate-spin rounded-full border-4 border-[#C79A2E] border-t-transparent" />
 
-            <h1 className="mt-8 text-3xl font-extrabold text-[#183D24]">
+            <h1 className="mt-8 text-2xl font-extrabold text-[#183D24] sm:text-3xl">
               Analisando suas respostas...
             </h1>
 
@@ -136,7 +136,7 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
           </div>
         ) : step < questions.length ? (
           <div className="w-full">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#C79A2E]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C79A2E] sm:text-sm sm:tracking-[0.3em]">
               Pergunta {step + 1} de {questions.length}
             </p>
 
@@ -147,7 +147,7 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
               />
             </div>
 
-            <h1 className="mt-8 text-4xl font-extrabold leading-tight text-[#183D24]">
+            <h1 className="mt-8 text-3xl font-extrabold leading-tight text-[#183D24] sm:text-4xl">
               {currentQuestion.title}
             </h1>
 
@@ -158,7 +158,7 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
                   onClick={() =>
                     handleAnswer(currentQuestion.field as keyof Answers, value)
                   }
-                  className="rounded-2xl border border-gray-200 bg-white px-6 py-5 text-left text-lg font-semibold text-[#333] transition hover:border-[#214D2F] hover:bg-[#FAF8F2]"
+                  className="rounded-2xl border border-gray-200 bg-white px-5 py-4 text-left text-base font-semibold text-[#333] transition hover:border-[#214D2F] hover:bg-[#FAF8F2] sm:px-6 sm:py-5 sm:text-lg"
                 >
                   {label}
                 </button>
@@ -167,33 +167,33 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
           </div>
         ) : (
           <div className="text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#C79A2E]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#C79A2E] sm:text-sm sm:tracking-[0.3em]">
               Resultado da pré-análise
             </p>
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-[#183D24]">
+            <h1 className="mt-5 text-3xl font-extrabold leading-tight text-[#183D24] sm:text-4xl">
               Você pode ter boas chances de comprar
             </h1>
 
-            <div className="mt-8 rounded-3xl bg-[#FAF8F2] p-8">
-              <p className="text-lg font-semibold text-[#555]">
+            <div className="mt-6 rounded-3xl bg-[#FAF8F2] p-5 sm:mt-8 sm:p-8">
+              <p className="text-base font-semibold text-[#555] sm:text-lg">
                 Imóvel estimado de até
               </p>
 
-              <p className="mt-2 text-5xl font-extrabold text-[#183D24]">
+              <p className="mt-2 text-4xl font-extrabold text-[#183D24] sm:text-5xl">
                 R$ {result.value.toLocaleString("pt-BR")}
               </p>
 
-              <p className="mt-6 text-lg font-semibold text-[#555]">
+              <p className="mt-5 text-base font-semibold text-[#555] sm:mt-6 sm:text-lg">
                 Parcelas a partir de
               </p>
 
-              <p className="mt-2 text-4xl font-extrabold text-[#C79A2E]">
+              <p className="mt-2 text-3xl font-extrabold text-[#C79A2E] sm:text-4xl">
                 R$ {result.parcela.toLocaleString("pt-BR")}/mês
               </p>
             </div>
 
-            <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-[#666]">
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#666] sm:mt-6">
               Esta é uma estimativa inicial. A aprovação final depende da análise
               da Caixa Econômica Federal, renda, entrada, documentação e
               condições do imóvel.
@@ -204,7 +204,7 @@ Parcelas a partir de R$ ${result.parcela.toLocaleString("pt-BR")}/mês.`;
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex w-full justify-center rounded-xl bg-[#214D2F] px-8 py-4 font-bold uppercase tracking-wide text-white transition hover:bg-[#183923] md:w-[360px]"
+                className="inline-flex w-full justify-center rounded-xl bg-[#214D2F] px-6 py-4 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-[#183923] sm:px-8 md:w-[360px]"
               >
                 Falar com Especialista
               </a>
